@@ -3,6 +3,7 @@ import Java from "./icons/Java.astro";
 import CSS from "./icons/CSS.astro";
 import HTML from "./icons/HTML.astro";
 import JavaScript from "./icons/JavaScript.astro";
+import ASTRO from "./icons/ASTRO.astro";
 const TAGS = {
     JAVA: {
         name: "Java",
@@ -24,6 +25,11 @@ const TAGS = {
         class: "bg-gray-800 text-[#f0db4f]",
         icon: JavaScript,
     },
+    ASTRO: {
+        name: "Astro",
+        class: "bg-gray-800 text-[#ff5d01]",
+        icon: ASTRO,
+    },
 };
 
 const PROJECTS = [
@@ -34,12 +40,19 @@ const PROJECTS = [
         image: "/projects/bicicleta.webp",
         tags: [TAGS.JAVA, TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
     },
+    {
+        title: "Portfolio",
+        description: "This is my portfolio website, where I show my projects and skills.",
+        github: "#https://github.com/Flare785/portfolio.dev",
+        image: "/projects/portfolioImage.webp",
+        tags: [TAGS.ASTRO, TAGS.JAVASCRIPT],
+    },
 ];
 ---
 
 {
     PROJECTS.map(({ image, title, description, tags }) => (
-        <article>
+        <article class="mb-4">
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-x-2 flex-row mb-2">
